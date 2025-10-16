@@ -1,0 +1,41 @@
+button{
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+}
+$color1: #140f07; 
+$color2: #21243c; 
+$color3: #4e4e84; 
+$color4: #827ed7; 
+$color5: #c8baf9; 
+button.floating-action {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+
+  background: $color3; 
+  color: $color5; 
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  padding: 0.75rem 1.5rem;
+  cursor: progress;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s ease, transform 0.3s ease;
+
+  background-image: url('https://images.unsplash.com/photo-1752430038064-250d400e220f?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1924'); // 🔁 Cambia esta ruta
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+
+  &:hover {
+    background-color: $color4;
+    transform: translateY(-3px);
+  }
+
+  &:focus {
+    outline: 2px solid $color5;
+    outline-offset: 2px;
+  }
+}

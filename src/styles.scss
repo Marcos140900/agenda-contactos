@@ -1,0 +1,53 @@
+
+
+@use '@angular/material' as mat;
+@use './../public/styles/theme-colors' as colors;
+$color1: #140f07;
+$color2: #21243c;
+$color3: #4e4e84;
+$color4: #827ed7;
+$color5: #c8baf9;
+
+
+
+html {
+  color-scheme: light dark;
+  @include mat.theme((
+    color: (
+      primary: colors.$primary-palette,
+      tertiary: colors.$tertiary-palette,
+    ),
+    typography: Roboto,
+    density: 0,
+  ));
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+p {margin: 0;}
+
+.flex-apart{
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-column{
+  display: flex !important;
+  flex-direction: column;
+}
+
+.error{
+  @include mat.button-overrides((
+    text-ripple-color: var(--mat-sys-error-container),
+    text-label-text-color: var(--mat-sys-error),
+    ));
+}
+
+.tertiary{
+  @include mat.button-overrides((
+    text-label-text-color: var(--mat-sys-tertiary),
+    ));
+  @include mat.fab-overrides((
+    container-color: var(--mat-sys-tertiary-container),
+    ));
+}

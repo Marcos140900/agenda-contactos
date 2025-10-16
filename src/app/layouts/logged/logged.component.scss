@@ -1,0 +1,81 @@
+// Estado activo (hover, seleccionado)
+$color1: #140f07; 
+$color2: #21243c;   
+$color3: #4e4e84;  
+$color4: #827ed7;   
+$color5: #c8baf9; 
+
+.active {
+  background-color: $color4;
+  font-weight: 700;
+  color: $color5;
+}
+
+
+#extendable-container {
+  display: flex;
+  height: calc(100% - 64px);
+
+  main {
+    width: 100%;
+    padding: 20px;
+    background-color: $color1;
+    color: $color5;
+  }
+}
+
+#extendable {
+  width: 40px;
+  justify-content: space-between;
+  transition: 200ms ease-in-out;
+  padding: 20px 10px;
+  container-type: inline-size;
+  background-color: $color2;
+  color: $color5;
+
+  &.extended {
+    width: 180px;
+    align-items: flex-start;
+  }
+
+  > * {
+    align-items: flex-start;
+  }
+}
+
+p {
+  margin-top: 5px;
+  color: $color5;
+}
+
+@container (width < 120px) {
+  a,
+  button {
+    padding: 0 !important;
+    min-width: 40px;
+
+    mat-icon {
+      margin: 0;
+    }
+  }
+
+  span {
+    display: none;
+  }
+}
+
+// Boton
+button {
+  text-align: center;
+  background-color: $color3;
+  color: $color5;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-weight: 500;
+  transition: background-color 0.2s ease-in-out;
+
+  &:hover {
+    background-color: $color4;
+  }
+}

@@ -1,0 +1,32 @@
+
+
+.contacto-container{
+  container-type: inline-size;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  padding: 5px 10px;
+  align-items: center;
+  cursor: pointer;
+  &:hover{
+    background-color: #21243c;
+    border-radius: 30px;
+  }
+  >:first-child{
+    content: attr(data-name);//agregado*
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+}
+
+@container(width < 500px){
+  #actions-container{
+    display: none;
+  }
+}
+
+@container(width < 400px){
+  #email-container{
+    display: none;
+  }
+}

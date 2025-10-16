@@ -1,0 +1,25 @@
+#table-header {
+  container-type: inline-size;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  padding: 8px 20px;
+  font-weight: 500;
+  background-color: #21243c;
+  color: #c8baf9;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  align-items: center;
+  border-radius: 8px;
+}
+
+// Responsive: Ocultar columnas según tamaño del contenedor
+@container (width < 500px) {
+  #actions {
+    display: none;
+  }
+}
+
+@container (width < 400px) {
+  #email {
+    display: none;
+  }
+}

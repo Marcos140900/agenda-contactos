@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\AgendaApi",
+    "\\AgendaApi\\API",
+    "\\AgendaApi\\API\\Controllers",
+    "\\AgendaApi\\API\\Data"
+  ],
+  "SelectedNode": "\\AgendaApi\\API\\Controllers\\UsersController.cs",
+  "PreviewInSolutionExplorer": false
+}

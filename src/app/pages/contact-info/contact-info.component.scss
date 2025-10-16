@@ -1,0 +1,64 @@
+@use '@angular/material' as mat;
+
+// Paleta 
+$color1: #140f07;
+$color2: #21243c;
+$color3: #4e4e84;
+$color4: #827ed7;
+$color5: #c8baf9;
+
+
+mat-card-content {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-top: 20px;
+
+  #right {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 40px 1fr;
+    gap: 20px 0px;
+
+    a {
+      text-decoration: none;
+      color: $color5;
+
+      &:hover {
+        color: $color4;
+      }
+    }
+  }
+}
+
+
+#favorite {
+  position: absolute;
+  right: 20px;
+  top: -30px;
+
+  .active {
+    color: $color4;
+  }
+}
+
+// boton prueba?
+button.active {
+  background-color: #140f07;
+  color: $color5;
+  border: none;
+  border-radius: 0.4rem;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $color4;
+  }
+
+  &:focus {
+    outline: 2px solid $color5;
+    outline-offset: 2px;
+  }
+}
